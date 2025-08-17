@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nitin Pathak | Portfolio</title>
+  <meta name="description" content="Portfolio website - Nitin Pathak">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="logo" href="#hero" aria-label="Homepage">NP</a>
+      <nav class="site-nav" aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="navList">☰</button>
+        <ul id="navList">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><button id="themeToggle" class="chip" aria-pressed="false" title="Toggle theme">🌓 Theme</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="hero" class="hero reveal">
+      <div class="bg-shapes">
+        <span class="blob b1"></span>
+        <span class="blob b2"></span>
+        <span class="blob b3"></span>
+      </div>
+      <div class="container hero-inner">
+        <h1><span id="greet">Welcome</span>, I'm <strong>Nitin Pathak</strong></h1>
+        <p class="lead">Cybersecurity Enthusiast · Web Developer · Linux Enthusiast</p>
+        <div class="cta-row">
+          <a href="#projects" class="btn">View Projects</a>
+          <a href="assets/Nitin_Pathak_Resume.pdf" target="_blank" rel="noreferrer" class="btn btn-outline">Download Résumé</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section reveal">
+      <div class="container grid-2">
+        <div>
+          <h2>About Me</h2>
+          <p>
+            I'm a learner focused on practical <strong>cybersecurity</strong> and modern <strong>front‑end development</strong>.
+            This portfolio is part of my Coursera capstone. My goals are to build accessible, fast, and
+            visually clean apps while understanding the security implications behind each decision.
+          </p>
+          <ul class="ticks">
+            <li>Semantic, accessible HTML5 with ARIA where needed</li>
+            <li>Responsive CSS (Grid/Flex) with theming and motion</li>
+            <li>Vanilla JS for progressive enhancement</li>
+            <li>Linux (Command Line), Git/GitHub, basic networking & threats</li>
+          </ul>
+        </div>
+        <div class="about-media">
+          <img src="assets/profile.jpg" alt="Profile placeholder for Nitin Pathak" class="avatar">
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section alt reveal">
+      <div class="container">
+        <h2>Skills</h2>
+        <ul class="chips">
+          <li>HTML5</li><li>CSS3</li><li>JavaScript (ES6+)</li><li>Linux (Mint)</li>
+          <li>Git & GitHub</li><li>Networking Basics</li><li>Threat Modeling</li>
+        </ul>
+        <div class="bars">
+          <div class="bar"><span style="--pct: 85%">HTML</span></div>
+          <div class="bar"><span style="--pct: 80%">CSS</span></div>
+          <div class="bar"><span style="--pct: 70%">JavaScript</span></div>
+          <div class="bar"><span style="--pct: 65%">Linux</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section reveal">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="cards">
+          <article class="card hover-rise">
+            <img src="assets/project_calculator.jpg" alt="Colorful hero image for Calculator App">
+            <div class="card-body">
+              <div class="meta"><span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JS</span></div>
+              <h3>Calculator App</h3>
+              <p>
+                A responsive, keyboard‑friendly calculator implementing standard operations (+ − × ÷),
+                input sanitization, and graceful error handling (e.g., division by zero).
+                Designed with accessible buttons, logical tab order, and clear focus styles.
+              </p>
+              <ul class="bullets">
+                <li>Custom keyboard handler with debounced input</li>
+                <li>ARIA roles and labels for screen readers</li>
+                <li>Themeable via CSS variables</li>
+              </ul>
+              <div class="links">
+                <a href="https://github.com/yourgithub/calculator" target="_blank" rel="noreferrer">GitHub</a>
+                <a class="disabled" aria-disabled="true">Live Demo (soon)</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card hover-rise">
+            <img src="assets/project_snake.jpg" alt="Gradient image labelled Snake Game C">
+            <div class="card-body">
+              <div class="meta"><span class="badge">C</span><span class="badge">ncurses</span></div>
+              <h3>Snake Game (C)</h3>
+              <p>
+                Classic terminal snake using <code>ncurses</code> for rendering and real‑time input.
+                The project showcases clean struct‑based game state, collision detection, and an event loop.
+              </p>
+              <ul class="bullets">
+                <li>Frame‑timed loop with adjustable speed</li>
+                <li>Modular design for grid, snake, food</li>
+                <li>Portable build with <code>gcc</code> and Makefile</li>
+              </ul>
+              <div class="links">
+                <a href="https://github.com/yourgithub/snake-c" target="_blank" rel="noreferrer">GitHub</a>
+                <span class="muted">Console project</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card hover-rise">
+            <img src="assets/project_netsec.jpg" alt="Gradient image labelled Network Security Notes">
+            <div class="card-body">
+              <div class="meta"><span class="badge">Notes</span><span class="badge">Diagrams</span></div>
+              <h3>Network Security Notes</h3>
+              <p>
+                A concise primer on OSI vs TCP/IP, common protocols, and real‑world threats.
+                Includes examples of attack chains, primary/secondary/second‑order effects, and incident response checklists.
+              </p>
+              <ul class="bullets">
+                <li>Diagrams for BGP, IXPs, and AS routing</li>
+                <li>Kill Chain + MITRE ATT&CK quick cards</li>
+                <li>Glossary with practical explanations</li>
+              </ul>
+              <div class="links">
+                <a href="https://github.com/yourgithub/netsec-notes" target="_blank" rel="noreferrer">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card hover-rise">
+            <img src="assets/project_portfolio.jpg" alt="Gradient image labelled Portfolio Website">
+            <div class="card-body">
+              <div class="meta"><span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JS</span></div>
+              <h3>This Portfolio Website</h3>
+              <p>
+                The site you're viewing: responsive layout, scroll‑reveal animations, dark/light theme,
+                and accessible components. Built without frameworks to demonstrate fundamentals.
+              </p>
+              <ul class="bullets">
+                <li>IntersectionObserver‑based reveal on scroll</li>
+                <li>Glassmorphism cards + soft shadows</li>
+                <li>Keyboard‑friendly navigation menu</li>
+              </ul>
+              <div class="links">
+                <a href="#" aria-disabled="true" class="disabled">Source to be added</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section alt reveal">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:yourname@example.com">yourname@example.com</a></p>
+        <p>
+          <a href="https://www.linkedin.com/in/nitin-pathak-249bb6351/" target="_blank" rel="noreferrer">LinkedIn</a> ·
+          <a href="https://github.com/NitinPathak24x7" target="_blank" rel="noreferrer">GitHub</a>
+        </p>
+
+        <form id="contactForm" class="contact-form" aria-label="Contact form">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required placeholder="Your name" />
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required placeholder="you@example.com" />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required placeholder="Write your message"></textarea>
+
+          <button type="submit" class="btn">Send</button>
+          <p id="formStatus" class="muted" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Nitin Pathak · Built for Coursera Project</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
